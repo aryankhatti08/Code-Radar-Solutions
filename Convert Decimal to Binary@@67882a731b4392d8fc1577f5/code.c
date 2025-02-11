@@ -1,19 +1,18 @@
 #include <stdio.h>
 
-void decimalToBinary(int n) {
-    int binary[32], i = 0;
+int main(){
+    int n, i=0, b[40];
+    scanf("%d", &n);
+    if (n == 0) {
+        printf("0");
+    }
     while (n > 0) {
-        binary[i++] = n % 2;
-        n /= 2;
+        b[i] = n % 2; 
+        n = n / 2;
+        i++;
     }
     for (int j = i - 1; j >= 0; j--) {
-        printf("%d", binary[j]);
+        printf("%d", b[j]);
     }
-}
-
-int main() {
-    int n;
-    scanf("%d", &n);
-    decimalToBinary(n);
     return 0;
 }
