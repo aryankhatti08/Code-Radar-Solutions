@@ -1,14 +1,19 @@
 #include <stdio.h>
 
-int main() {
-    int a, rem = 0, bin = 0, place = 1;
-    scanf("%d", &a);
-    while (a > 0) {
-        rem = a & 1;
-        a = a >> 1;
-        bin = bin + (rem * place);
-        place = place * 10;
+void decimalToBinary(int n) {
+    int binary[32], i = 0;
+    while (n > 0) {
+        binary[i++] = n % 2;
+        n /= 2;
     }
-    printf("%d", bin);
+    for (int j = i - 1; j >= 0; j--) {
+        printf("%d", binary[j]);
+    }
+}
+
+int main() {
+    int n;
+    scanf("%d", &n);
+    decimalToBinary(n);
     return 0;
 }
