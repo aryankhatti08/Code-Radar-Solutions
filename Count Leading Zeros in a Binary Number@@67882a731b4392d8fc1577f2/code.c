@@ -1,12 +1,14 @@
 #include <stdio.h>
 
 int main() {
-    int num, pos = 0;
-    scanf("%d", &num);
-    while ((num & 1) == 0) {
-        num >>= 1;
-        pos++;
+    unsigned int a,count=0;
+    scanf("%u",&a);
+
+        while(a!=0)
+    {
+        count+=1;
+        a=a/2;
     }
-    printf("%d", pos);
+    printf("%d",32-count);
     return 0;
 }
