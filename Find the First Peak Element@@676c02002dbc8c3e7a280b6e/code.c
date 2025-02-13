@@ -1,17 +1,17 @@
 #include <stdio.h>
 
 int peak(int arr[], int a) {
-    if (a == 1) return arr[0];  // Only one element
+    if (a == 1) return arr[0];
 
-    if (arr[0] > arr[1]) return arr[0];  // First element peak
-    if (arr[a - 1] > arr[a - 2]) return arr[a - 1];  // Last element peak
+    if (arr[0] > arr[1]) return arr[0];
+    if (arr[a - 1] > arr[a - 2]) return arr[a - 1];
 
     for (int i = 1; i < a - 1; i++) {
         if (arr[i] > arr[i - 1] && arr[i] > arr[i + 1])
             return arr[i];
     }
     
-    return -1; 
+    return -1;
 }
 
 int main() {
