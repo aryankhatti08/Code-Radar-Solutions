@@ -1,36 +1,18 @@
-
 #include <stdio.h>
 
-int main(int argc, const char * argv[])
-{
-    long numCheck = 0;
-    int divisibleByCounter = 2;
-    printf("Enter a number: \n");
-    scanf("%ld", &numCheck);
-    long halfNumCheck = numCheck / 2;
-    
-    if(numCheck == 1){
-        printf("The number 1 is not a prime! A prime number must satisfy two conditions: it should be divisible by 1 and by itself");
-    } else {
-    if(numCheck < 1){
-        printf("Please enter a number greater than 0");
-    } else {
-        printf("The number %ld can be divided by: \n1", numCheck);
-        for(long i = 2; i < halfNumCheck + 1;){
-            if(numCheck % i == 0){
-                divisibleByCounter++;
-                printf("\n%ld", i);
-                }
-            i++;
-        }
-        printf("\n%ld", numCheck);
-        
-        if(divisibleByCounter == 2){
-            printf("\nThe number '%ld' is a prime! It can only be divided by 1 and %ld", numCheck, numCheck);
-        } else {
-            printf("\nThe number '%ld' is not a prime, it has %d divisors", numCheck, divisibleByCounter);
-        }
-    }
+int isPrime(int n) {
+    if (n < 2) return 0;
+    for (int i = 2; i * i <= n; i++)
+        if (n % i == 0) return 0;
+    return 1;
+}
+
+int main() {
+    int t, num;
+    scanf("%d", &t);
+    while (t--) {
+        scanf("%d", &num);
+        printf("%d\n", isPrime(num));
     }
     return 0;
 }
