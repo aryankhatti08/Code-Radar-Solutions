@@ -1,6 +1,6 @@
 #include <stdio.h>
 int main(){
     char star = '*';
-    scanf("%c",star);
-    printf("You entered: %c",star);
+    scanf("%c",char);
+    printf("You entered: %c",char);
 }
