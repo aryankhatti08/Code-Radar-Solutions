@@ -2,5 +2,6 @@
 int main(){
     char star '*';
     scanf("%c",&star);
-    printf("charachter is %c")
+    printf("charachter is %c");
+    return 0;
 }
