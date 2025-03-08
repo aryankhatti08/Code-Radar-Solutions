@@ -2,7 +2,8 @@
 int main(){
     float a;
     a = 3.14;
-    scanf("%d",a);
-    printf("a");
+    printf("A floating no");
+    scanf("%f",a);
+    printf("%f",a);
     return 0;
 }
