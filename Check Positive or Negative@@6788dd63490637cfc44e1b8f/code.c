@@ -1,6 +1,6 @@
 #include <stdio.h>
 int main(){
-    int positive,negative,zero;
+    int a,positive,negative,zero;
     scanf("%d %d %d",&positive,&negative,&zero);
     if(a==0){
         printf("%d",zero);
